@@ -3,7 +3,7 @@
     "development": {
       "username": "root",
       "password": "Wordpass3!!!992",
-      "database": "passport_demo",
+      "database": "_demo",
       "host": "127.0.0.1",
       "dialect": "mysql"
     },
