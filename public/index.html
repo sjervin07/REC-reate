@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,8 +10,10 @@
 
     <!--Links to the Css-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Special+Elite&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Arvo:700|Roboto:500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
    
 
 
@@ -40,59 +43,24 @@
         </button>
       </li>
     </ul>
-    <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Login</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            ...
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Register</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            ...
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
-        </div>
-      </div>
-    </div>
+    
     
   </nav>
 </header>
 <div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-4">Fluid jumbotron</h1>
-    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+  <div class="container" >
+    <h1 class="display-4">REC-reate</h1>
+    <p class="lead">Pick-up games made easy</p>
   </div>
 </div>
     <div class="container">
+
+      
         <section id="Mission">
 
           <!--   Mission Statement   -->
-            <div class="row">
-                <div class="col-12  mb-5">
+            <div class="row mb-5">
+                <div class="col-12  ">
 
                         <h2>Our Mission Statement</h2>
 
@@ -100,51 +68,89 @@
                         
                         
 
-                </div>
-
+                 </div>
+             </div>
+         </section>
+            <section id="parkResults">
+              <div class="row mb-5">
                 <div class="col-6"><ul class="list-unstyled">
                   <li class="media">
-                    <img src="..." class="mr-3" alt="...">
+                    <img src="img/85th-Logo-FINAL-4-color_2.png" class="mr-3" alt="park logo">
                     <div class="media-body">
-                      <h5 class="mt-0 mb-1">List-based media object</h5>
+                      <h5 class="mt-0 mb-1">Park Name</h5>
                       Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
                     </div>
                   </li>
                   <li class="media my-4">
-                    <img src="..." class="mr-3" alt="...">
+                    <img src="img/85th-Logo-FINAL-4-color_2.png" class="mr-3" alt="park logo">
                     <div class="media-body">
-                      <h5 class="mt-0 mb-1">List-based media object</h5>
+                      <h5 class="mt-0 mb-1">Park Name</h5>
                       Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
                     </div>
                   </li>
                   <li class="media">
-                    <img src="..." class="mr-3" alt="...">
+                    <img src="img/85th-Logo-FINAL-4-color_2.png" class="mr-3" alt="park logo">
                     <div class="media-body">
-                      <h5 class="mt-0 mb-1">List-based media object</h5>
+                      <h5 class="mt-0 mb-1">Park Name</h5>
                       Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
                     </div>
                   </li>
                 </ul></div>
-                <div class="col-6"></div>
-
-                
-                    
-              
-
-                    
-                <div class="searchresults">
-
-
+                <div class="col-6">
+                  <div id="map-container"><div id="map"></div></div>
                 </div>
-                    
+              </div>
 
-                
+             </section>
 
-                      
-                          
-            </div>
+
+             <section class="results">
+               <div class="row mb-5">
+                <div class="searchresults col-12">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Username</th>
+                        <th scope="col">Park</th>
+                        <th scope="col">Sport</th>
+                        <th scope="col">Players</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Basketball</td>
+                        <td>1/10</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Volleyball</td>
+                        <td>5/12</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>Tennis</td>
+                        <td>2/2</td>
+                      </tr>
+                    </tbody>
+                  </table>
+      
+      
+                </div>
+
+               </div>
+             </section>
         
-          </section>
+          
+
+
+
+
+
+          
     </div>
     <footer class="page-footer green darken-4">
               <div class="container center">
