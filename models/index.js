@@ -1,3 +1,11 @@
+//SameSite Attribute---express-session
+//This limits the scope of the cookie such that it will only be attached to requests
+//if those requests are same-site
+//If same-site attribute is strict (as below) cookie will only be sent with same-site requests
+//Alternatively, if same-site attribute is "lax" cookie will be sent with same-site and with
+//cross-site top-level navigations
+//That said, if same-site attribute is "none" cookie will be sent with same- and cross-site requests
+//If samesite attribute's value is something else, it will be treated as "none"
 'use strict';
 
 const fs        = require('fs');
@@ -16,7 +24,7 @@ if (config.use_env_variable) {
 
 fs
   .readdirSync(__dirname)
-  .filter(function(file) {
+  .filter((file) => {
     return (file.indexOf('.') !== 0) && (file !== basename) && (file.slice(-3) === '.js');
   })
   .forEach(function(file) {
@@ -24,7 +32,7 @@ fs
     db[model.name] = model;
   });
 
-Object.keys(db).forEach(function(modelName) {
+Object.keys(db).forEach((modelName) => {
   if (db[modelName].associate) {
     db[modelName].associate(db);
   }

@@ -8,12 +8,16 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false,
       unique: true,
+      //use regex to validate input information
       validate: /\S+@\S+\.\S+/
     },
     // The password cannot be null and must be between 6 and 50 characters in length
     password: {
       type: DataTypes.STRING,
       allowNull: false,
+      //use regex to validate input information
+      //requires that a password must be between 6 and 50 characters in length
+      //link deployed random password generator? perhaps! 
       validate: /^[0-9A-Za-z!@.,;:'"?-]{6,50}\z/
     }
   });
