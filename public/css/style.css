@@ -1,1 +1,58 @@
+.jumbotron {
+    background-image: url(../img/hero-1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+h1 {
+    font-family: 'Special Elite', cursive;
+    color: #fff;
+    text-shadow: 2px 4px 6px rgba(28,12,7,0.75);
+}
+
+h2, h3, h4, h5, h6 {font-family: 'Special Elite', cursive;}
+
+.lead {
+    color: #fff;
+    font-size: 24px;
+}
+
+body {
+    font-family: 'Didact Gothic', sans-serif;
+}
+
+
+/* Colors */
+
+.dark-green {
+    color: #016408;
+}
+
+.fa-bars {
+    color: rgb(216, 212, 212);
+}
+
+
+/* Login */
+
+.form-signin {
+    /* padding: 15px; */
+    margin: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+/* Overflow box */
+
+.listing {
+  width: 100%;
+  height: 350px;
+  overflow: scroll;
+}
+
+
+
+
 

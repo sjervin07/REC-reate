@@ -1,0 +1,86 @@
+{{> nav }}
+
+{{> nav }}
+<div id="signup" class="container mt-5">
+   <form class="mt-5">
+            <h4 class="form-title mt-3">CREATE A PROFILE</h4>
+            <hr>
+            <div class="form-row mt-3">
+        
+              <div class="col">
+                <Label>First Name : </Label>
+                <input id="firstName" type="text" class="form-control" placeholder="John">
+                <ul id="suggestions" class="list-group"></ul>
+              </div>
+        
+              <div class="col">
+                <Label>Last Name : </Label>
+                <input id="lastName" type="text" class="form-control" placeholder="Doe">
+                <ul id="suggestions" class="list-group"></ul>
+              </div>
+        
+            </div>
+        
+            <div class="form-row mt-3">
+        
+              <div class="col">
+                <Label>Email Address : </Label>
+                <br>
+                    <input id="email" type="email" name="emailaddress"  class="form-control" >
+              </div>
+              
+              <div class="col">
+                <Label>Birthdate : </Label>
+                <input id="birthdate" type="date" class="form-control" placeholder="Date">
+                <ul id="suggestions" class="list-group"></ul>
+        
+               </div>
+            </div>
+        
+            <div class="form-row mt-3">
+        
+              <div class="col">
+                <Label>Gender : </Label>
+                <br>
+                    <input type="radio" name="gender" value="male"> Male<br>
+                    <input type="radio" name="gender" value="female"> Female<br>
+                    <input type="radio" name="gender" value="other"> Prefer Not to Answer<br>
+              </div>
+        
+              <div class="col">
+                <Label>Prefered Sports : </Label>
+                <br>
+        
+                    <input type="radio" name="sports" value="football"> Football<br>
+                    <input type="radio" name="sports" value="baseball"> Baseball<br>
+                    <input type="radio" name="sports" value="basketball"> Basketball<br>
+                    <input type="radio" name="sports" value="soccer"> Soccer<br>
+                    <input type="radio" name="sports" value="other"> Other<br>
+    
+        
+               </div>
+            </div>
+        
+            
+            <div class="form-row mt-3">
+        
+                <Label>Bio : </Label>
+                    <input id="bio" type="text" name="bio" class="form-control" >
+            </div>
+            
+            <div class="form-row mt-3">
+        
+                <Label>Profile Image URL : </Label>
+                    <input id="imageUrl" type="text" name="image" class="form-control" >
+            </div>
+       
+            <div class="signup-button mx-auto">
+              <button type="submit" class="btn-primary btn-lg mt-5 col-4 mx-auto">Create Profile</button>
+            </div>
+
+        </div>
+
+            
+        
+            </form>
+</div>
