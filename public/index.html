@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Special+Elite&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Arvo:700|Roboto:500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
    
@@ -26,31 +27,43 @@
 <!-- haha i was here -->
 <header>
   <!--Navigation Bar-->
-  <nav class="navbar navbar-light bg-light justify-content-end">
-    <ul class="nav">
-      <li class="nav-item">
-        <a class="nav-link active" href="#">Home</a>
-      </li>
-      <li class="nav-item mx-md-2">
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
-          Login
+  <nav class="navbar navbar-expand-md navbar-dark navbar-shrink bg-dark">
+        <a class="navbar-brand d-md-none" href="/">REC-reate</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDrop" aria-controls="navbarNavDrop" aria-expanded="false" aria-label="Toggle nav">
+            <span class="fas fa-bars"></span>
         </button>
-      </li>
-      <span></span>
-      <li class="nav-item">
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2">
-          Register
-        </button>
-      </li>
-    </ul>
-    
-    
-  </nav>
+
+        <div id="navbarNavDrop" class="navbar-collapse collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">
+                    <i class="fa fa-home"></i>REC-reate
+                    <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+            <ul class="navbar-nav">
+              <a class="nav-link  text-white" href="/login">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/register">Register</a>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/parks">Search</a>
+                </li>
+                <li class ="nav-item">
+                    <a class="nav-link text-white" href="/profile">Profile</a>
+                </li>
+                </li>
+            </ul>
+        </div>
+    </nav>
 </header>
 <div class="jumbotron jumbotron-fluid">
   <div class="container" >
-    <h1 class="display-4">REC-reate</h1>
-    <p class="lead">Pick-up games made easy</p>
+    <h1 class="display-4"><span class="dark-green">REC</span>-reate</h1>
+    <p class="lead"><strong>Pick-up games made easy</strong></p>
   </div>
 </div>
     <div class="container">
@@ -73,29 +86,39 @@
          </section>
             <section id="parkResults">
               <div class="row mb-5">
-                <div class="col-6"><ul class="list-unstyled">
+                <div class="col-6 listing"><ul class="list-unstyled">
                   <li class="media">
                     <img src="img/85th-Logo-FINAL-4-color_2.png" class="mr-3" alt="park logo">
                     <div class="media-body">
-                      <h5 class="mt-0 mb-1">Park Name</h5>
-                      Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                      <h5 class="mt-0 mb-1"><strong>Park Name</strong></h5>
+                      <p id="address">123 Fake st.</p>
+                      <p id="city">Chicago, IL</p>
+                      <p id="zipcode">60164</p>
+                      <p id="telephone">888-555-1234</p>
                     </div>
                   </li>
                   <li class="media my-4">
                     <img src="img/85th-Logo-FINAL-4-color_2.png" class="mr-3" alt="park logo">
                     <div class="media-body">
-                      <h5 class="mt-0 mb-1">Park Name</h5>
-                      Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                      <h5 class="mt-0 mb-1"><strong>Park Name</strong></h5>
+                      <p id="address">123 Fake st.</p>
+                      <p id="city">Chicago, IL</p>
+                      <p id="zipcode">60164</p>
+                      <p id="telephone">888-555-1234</p>
                     </div>
                   </li>
                   <li class="media">
                     <img src="img/85th-Logo-FINAL-4-color_2.png" class="mr-3" alt="park logo">
                     <div class="media-body">
-                      <h5 class="mt-0 mb-1">Park Name</h5>
-                      Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                      <h5 class="mt-0 mb-1"><strong>Park Name</strong></h5>
+                      <p id="address">123 Fake st.</p>
+                      <p id="city">Chicago, IL</p>
+                      <p id="zipcode">60164</p>
+                      <p id="telephone">888-555-1234</p>
                     </div>
                   </li>
-                </ul></div>
+                </ul>
+              </div>
                 <div class="col-6">
                   <div id="map-container"><div id="map"></div></div>
                 </div>
@@ -104,7 +127,7 @@
              </section>
 
 
-             <section class="results">
+             <section class="results listing">
                <div class="row mb-5">
                 <div class="searchresults col-12">
                   <table class="table">
@@ -131,6 +154,36 @@
                       </tr>
                       <tr>
                         <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>Tennis</td>
+                        <td>2/2</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">4</th>
+                        <td>Larry</td>
+                        <td>Tennis</td>
+                        <td>2/2</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">5</th>
+                        <td>Larry</td>
+                        <td>Tennis</td>
+                        <td>2/2</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">6</th>
+                        <td>Larry</td>
+                        <td>Tennis</td>
+                        <td>2/2</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">7</th>
+                        <td>Larry</td>
+                        <td>Tennis</td>
+                        <td>2/2</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">8</th>
                         <td>Larry</td>
                         <td>Tennis</td>
                         <td>2/2</td>

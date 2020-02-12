@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>REC-reate</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!--Links to the Css-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Special+Elite&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Arvo:700|Roboto:500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+   
+
+
+
+
+
+    
+</head>
+<body>
+<!-- haha i was here -->
+<header>
+  <!--Navigation Bar-->
+  <nav class="navbar navbar-expand-md navbar-dark navbar-shrink bg-dark">
+        <a class="navbar-brand d-md-none" href="/">REC-reate</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDrop" aria-controls="navbarNavDrop" aria-expanded="false" aria-label="Toggle nav">
+            <span class="fas fa-bars dark-red "></span>
+        </button>
+
+        <div id="navbarNavDrop" class="navbar-collapse collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">
+                    <i class="fa fa-home"></i>REC-reate
+                    <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+            <ul class="navbar-nav">
+              <a class="nav-link  text-white" href="/login">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/register">Register</a>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/parks">Search</a>
+                </li>
+                <li class ="nav-item">
+                    <a class="nav-link text-white" href="/profile">Profile</a>
+                </li>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+    <div class="container">
+
+      
+        <form class="mt-5">
+            <h4 class="form-title mt-3">CREATE A PROFILE</h4>
+            <hr>
+            <div class="form-row mt-3">
+        
+              <div class="col">
+                <Label>First Name : </Label>
+                <input id="firstName" type="text" class="form-control" placeholder="John">
+                <ul id="suggestions" class="list-group"></ul>
+              </div>
+        
+              <div class="col">
+                <Label>Last Name : </Label>
+                <input id="lastName" type="text" class="form-control" placeholder="Doe">
+                <ul id="suggestions" class="list-group"></ul>
+              </div>
+        
+            </div>
+        
+            <div class="form-row mt-3">
+        
+              <div class="col">
+                <Label>Email Address : </Label>
+                <br>
+                    <input id="email" type="email" name="emailaddress"  class="form-control" >
+              </div>
+              
+              <div class="col">
+                <Label>Birthdate : </Label>
+                <input id="birthdate" type="date" class="form-control" placeholder="Date">
+                <ul id="suggestions" class="list-group"></ul>
+        
+               </div>
+            </div>
+        
+            <div class="form-row mt-3">
+        
+              <div class="col">
+                <Label>Gender : </Label>
+                <br>
+                    <input type="radio" name="gender" value="male"> Male<br>
+                    <input type="radio" name="gender" value="female"> Female<br>
+                    <input type="radio" name="gender" value="other"> Prefer Not to Answer<br>
+              </div>
+        
+              <div class="col">
+                <Label>Prefered Sports : </Label>
+                <br>
+        
+                    <input type="radio" name="sports" value="football"> Football<br>
+                    <input type="radio" name="sports" value="baseball"> Baseball<br>
+                    <input type="radio" name="sports" value="basketball"> Basketball<br>
+                    <input type="radio" name="sports" value="soccer"> Soccer<br>
+                    <input type="radio" name="sports" value="other"> Other<br>
+    
+        
+               </div>
+            </div>
+        
+            
+            <div class="form-row mt-3">
+        
+                <Label>Bio : </Label>
+                    <input id="bio" type="text" name="bio" class="form-control" >
+            </div>
+            
+            <div class="form-row mt-3">
+        
+                <Label>Profile Image URL : </Label>
+                    <input id="imageUrl" type="text" name="image" class="form-control" >
+            </div>
+       
+            <div class="signup-button mx-auto">
+              <button type="submit" class="btn-primary btn-lg mt-5 col-4 mx-auto">Create Profile</button>
+            </div>
+
+        </div>
+
+            
+        
+            </form>
+        
+          
+
+
+
+
+
+          
+    </div>
+
+    <!--Cards of information will be made and displayed within the body, based on the wireframe, TWO to a row on monitor, ONE per row on mobile.-->
+    <!--Each card will have an image, description, and basic details pulled from an API-->
+    <!--Each search will clear out the previous search query, and new information will appear-->
+
+    <!--Footer design TBD when other more important tasks are completed-->
+
+    
+    <!--JavaScript at end of body for optimized loading-->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!--Links to the Css-->
+
+</body>
+</html>
