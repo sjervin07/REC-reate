@@ -22,6 +22,7 @@ CREATE TABLE users (
     lastName VARCHAR(40) NOT NULL,
     birthdate date,
     email VARCHAR(60),
+    password VARCHAR(50),
     bio VARCHAR(500),
     PRIMARY KEY (id)
 );

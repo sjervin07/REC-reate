@@ -31,7 +31,11 @@ module.exports = function(sequelize, Datatypes) {
             //password input must be between 6 and 50 characters in length, may use upper/lowercase, may use numbers, may use special chars
             validate: /^[0-9A-Za-z!@.,;:'"?-]{6,50}\z/
         },
-        bio: Datatypes.STRING,
+        bio: {
+            type: Datatypes.STRING,
+            allowNull: true,
+            validate: /^[0-9A-Za-z!@.,;:'"?-]{0,450}\z/
+        },
         createdAt: {
             type: Datatypes.DATE(3),
             allowNull: false,
