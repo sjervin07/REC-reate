@@ -34,6 +34,7 @@ module.exports = function(sequelize, Datatypes) {
         bio: {
             type: Datatypes.STRING,
             allowNull: true,
+            //bio character length set to 450; allowNull = true
             validate: /^[0-9A-Za-z!@.,;:'"?-]{0,450}\z/
         },
         createdAt: {
