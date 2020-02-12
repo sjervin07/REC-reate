@@ -11,7 +11,26 @@ module.exports = function(sequelize, Datatypes) {
         firstName: Datatypes.STRING,
         lastName: Datatypes.STRING,
         birthdate: Datatypes.DATE,
-        email: Datatypes.STRING,
+        email: {
+            type: Datatypes.STRING,
+                //Regex: 
+                // /->open; start of email address
+                // \S->not whitespace; user email name
+                // +->plus; combine user email with @
+                // @->@; matches @ symbol for email address
+                // \S->not whitespace; email client name
+                // +->plus; combine email client name with "."
+                // \.->escaped char; matches "." char for email
+                // \S->not whitespace; email client domain
+                // +->plus; match one or more of preceding token
+                // /->close; finish of email address
+            validate: /\S+@\S+\.\S+/
+        },
+        password: {
+            type: Datatypes.STRING,
+            //password input must be between 6 and 50 characters in length, may use upper/lowercase, may use numbers, may use special chars
+            validate: /^[0-9A-Za-z!@.,;:'"?-]{6,50}\z/
+        },
         bio: Datatypes.STRING,
         createdAt: {
             type: Datatypes.DATE(3),
