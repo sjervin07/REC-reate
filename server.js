@@ -8,6 +8,7 @@ const bodyParser = require("body-parser");
 // Setting up port and requiring models for syncing
 const PORT = process.env.PORT || 8642;
 const db = require("./models");
+const path = require("path");
 
 // Creating express app and configuring middleware needed for authentication
 const app = express();
@@ -27,11 +28,11 @@ app.set('views', path.join(__dirname, 'views'));
 app.set("view engine", "handlebars");
 
 // Requiring our routes
-const routes = [require("./routes/html-routes.js")(app), require("./routes/api-routes.js")(app)];
-app.use(routes);
+//const routes = [require("./routes/html-routes.js")(app), require("./routes/api-routes.js")(app)];
+//app.use(routes);
 
 // Syncing our database and logging a message to the user upon success
-db.sequelize.sync().then(function() {
+db.sequelize.sync({ force: true }).then(function() {
     app.listen(PORT, () => {
         console.log(`App running on http://localhost:${PORT}`)
     });    

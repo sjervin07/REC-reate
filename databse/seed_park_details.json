@@ -15083,7 +15083,7 @@
 	{
 		"id" : 1372,
 		"num" : 278,
-		"facility_name" : "HOUSTON (JESSIE \"MA\"\")\"",
+		"facility_name" : "HOUSTON (JESSIE ",
 		"facility_type" : "BASKETBALL COURT",
 		"facility_inout" : "OUTDOOR",
 		"x_coord" : 1182660,
@@ -15094,7 +15094,7 @@
 	{
 		"id" : 1373,
 		"num" : 278,
-		"facility_name" : "HOUSTON (JESSIE \"MA\"\")\"",
+		"facility_name" : "HOUSTON (JESSIE ",
 		"facility_type" : "BASKETBALL COURT",
 		"facility_inout" : "OUTDOOR",
 		"x_coord" : 1182730,
@@ -15105,7 +15105,7 @@
 	{
 		"id" : 1374,
 		"num" : 278,
-		"facility_name" : "HOUSTON (JESSIE \"MA\"\")\"",
+		"facility_name" : "HOUSTON (JESSIE ",
 		"facility_type" : "PLAYGROUND",
 		"facility_inout" : "OUTDOOR",
 		"x_coord" : 1182900,
@@ -32100,7 +32100,7 @@
 	{
 		"id" : 2919,
 		"num" : 278,
-		"facility_name" : "HOUSTON (JESSIE \"MA\"\")\"",
+		"facility_name" : "HOUSTON (JESSIE ",
 		"facility_type" : "BASKETBALL BACKBOARD",
 		"facility_inout" : "OUTDOOR",
 		"x_coord" : 1182730,
@@ -32111,7 +32111,7 @@
 	{
 		"id" : 2920,
 		"num" : 278,
-		"facility_name" : "HOUSTON (JESSIE \"MA\"\")\"",
+		"facility_name" : "HOUSTON (JESSIE ",
 		"facility_type" : "BASKETBALL BACKBOARD",
 		"facility_inout" : "OUTDOOR",
 		"x_coord" : 1182660,
@@ -32122,7 +32122,7 @@
 	{
 		"id" : 2921,
 		"num" : 278,
-		"facility_name" : "HOUSTON (JESSIE \"MA\"\")\"",
+		"facility_name" : "HOUSTON (JESSIE ",
 		"facility_type" : "BASKETBALL BACKBOARD",
 		"facility_inout" : "OUTDOOR",
 		"x_coord" : 1182660,
@@ -32133,7 +32133,7 @@
 	{
 		"id" : 2922,
 		"num" : 278,
-		"facility_name" : "HOUSTON (JESSIE \"MA\"\")\"",
+		"facility_name" : "HOUSTON (JESSIE ",
 		"facility_type" : "BASKETBALL BACKBOARD",
 		"facility_inout" : "OUTDOOR",
 		"x_coord" : 1182730,
@@ -35202,7 +35202,7 @@
 	{
 		"id" : 3201,
 		"num" : 309,
-		"facility_name" : "SENKA (EDWARD \"DUKE\"\")\"",
+		"facility_name" : "SENKA (EDWARD)'",
 		"facility_type" : "BASKETBALL BACKBOARD",
 		"facility_inout" : "OUTDOOR",
 		"x_coord" : 1153420,
@@ -35213,7 +35213,7 @@
 	{
 		"id" : 3202,
 		"num" : 309,
-		"facility_name" : "SENKA (EDWARD \"DUKE\"\")\"",
+		"facility_name" : "SENKA (EDWARD)'",
 		"facility_type" : "BASKETBALL BACKBOARD",
 		"facility_inout" : "OUTDOOR",
 		"x_coord" : 1153460,
@@ -35224,7 +35224,7 @@
 	{
 		"id" : 3203,
 		"num" : 309,
-		"facility_name" : "SENKA (EDWARD \"DUKE\"\")\"",
+		"facility_name" : "SENKA (EDWARD)'",
 		"facility_type" : "BASKETBALL BACKBOARD",
 		"facility_inout" : "OUTDOOR",
 		"x_coord" : 1153410,
@@ -35235,7 +35235,7 @@
 	{
 		"id" : 3204,
 		"num" : 309,
-		"facility_name" : "SENKA (EDWARD \"DUKE\"\")\"",
+		"facility_name" : "SENKA (EDWARD)'",
 		"facility_type" : "BASKETBALL BACKBOARD",
 		"facility_inout" : "OUTDOOR",
 		"x_coord" : 1153460,
@@ -35246,7 +35246,7 @@
 	{
 		"id" : 3205,
 		"num" : 309,
-		"facility_name" : "SENKA (EDWARD \"DUKE\"\")\"",
+		"facility_name" : "SENKA (EDWARD)'",
 		"facility_type" : "BASKETBALL BACKBOARD",
 		"facility_inout" : "OUTDOOR",
 		"x_coord" : 1153420,
@@ -35257,7 +35257,7 @@
 	{
 		"id" : 3206,
 		"num" : 309,
-		"facility_name" : "SENKA (EDWARD \"DUKE\"\")\"",
+		"facility_name" : "SENKA (EDWARD)'",
 		"facility_type" : "BASKETBALL BACKBOARD",
 		"facility_inout" : "OUTDOOR",
 		"x_coord" : 1153410,
@@ -44673,7 +44673,7 @@
 	{
 		"id" : 4062,
 		"num" : 309,
-		"facility_name" : "SENKA (EDWARD \"DUKE\"\")\"",
+		"facility_name" : "SENKA (EDWARD)'",
 		"facility_type" : "BASKETBALL COURT",
 		"facility_inout" : "OUTDOOR",
 		"x_coord" : 1153430,
@@ -44684,7 +44684,7 @@
 	{
 		"id" : 4063,
 		"num" : 309,
-		"facility_name" : "SENKA (EDWARD \"DUKE\"\")\"",
+		"facility_name" : "SENKA (EDWARD)'",
 		"facility_type" : "BASKETBALL COURT",
 		"facility_inout" : "OUTDOOR",
 		"x_coord" : 1153430,
@@ -44695,7 +44695,7 @@
 	{
 		"id" : 4064,
 		"num" : 309,
-		"facility_name" : "SENKA (EDWARD \"DUKE\"\")\"",
+		"facility_name" : "SENKA (EDWARD)'",
 		"facility_type" : "FOOTBALL/SOCCER COMBO FLD",
 		"facility_inout" : "OUTDOOR",
 		"x_coord" : 1153850,
@@ -44706,7 +44706,7 @@
 	{
 		"id" : 4065,
 		"num" : 309,
-		"facility_name" : "SENKA (EDWARD \"DUKE\"\")\"",
+		"facility_name" : "SENKA (EDWARD)'",
 		"facility_type" : "GYMNASIUM",
 		"facility_inout" : "INDOOR",
 		"x_coord" : 1153500,
@@ -44717,7 +44717,7 @@
 	{
 		"id" : 4066,
 		"num" : 309,
-		"facility_name" : "SENKA (EDWARD \"DUKE\"\")\"",
+		"facility_name" : "SENKA (EDWARD)'",
 		"facility_type" : "BASEBALL JR/SOFTBALL",
 		"facility_inout" : "OUTDOOR",
 		"x_coord" : 1153700,
@@ -44728,7 +44728,7 @@
 	{
 		"id" : 4067,
 		"num" : 309,
-		"facility_name" : "SENKA (EDWARD \"DUKE\"\")\"",
+		"facility_name" : "SENKA (EDWARD)'",
 		"facility_type" : "BASEBALL JR/SOFTBALL",
 		"facility_inout" : "OUTDOOR",
 		"x_coord" : 1153690,
@@ -44739,7 +44739,7 @@
 	{
 		"id" : 4068,
 		"num" : 309,
-		"facility_name" : "SENKA (EDWARD \"DUKE\"\")\"",
+		"facility_name" : "SENKA (EDWARD)'",
 		"facility_type" : "PLAYGROUND",
 		"facility_inout" : "OUTDOOR",
 		"x_coord" : 1153840,
@@ -44750,7 +44750,7 @@
 	{
 		"id" : 4069,
 		"num" : 309,
-		"facility_name" : "SENKA (EDWARD \"DUKE\"\")\"",
+		"facility_name" : "SENKA (EDWARD)'",
 		"facility_type" : "SPORT ROLLER COURT",
 		"facility_inout" : "OUTDOOR",
 		"x_coord" : 1153580,
@@ -44761,7 +44761,7 @@
 	{
 		"id" : 4070,
 		"num" : 309,
-		"facility_name" : "SENKA (EDWARD \"DUKE\"\")\"",
+		"facility_name" : "SENKA (EDWARD)'",
 		"facility_type" : "SPRAY FEATURE",
 		"facility_inout" : "OUTDOOR",
 		"x_coord" : 1153760,
@@ -44772,7 +44772,7 @@
 	{
 		"id" : 4071,
 		"num" : 309,
-		"facility_name" : "SENKA (EDWARD \"DUKE\"\")\"",
+		"facility_name" : "SENKA (EDWARD)'",
 		"facility_type" : "VOLLEYBALL",
 		"facility_inout" : "OUTDOOR",
 		"x_coord" : 1153860,
@@ -44783,7 +44783,7 @@
 	{
 		"id" : 4072,
 		"num" : 309,
-		"facility_name" : "SENKA (EDWARD \"DUKE\"\")\"",
+		"facility_name" : "SENKA (EDWARD)'",
 		"facility_type" : "VOLLEYBALL",
 		"facility_inout" : "OUTDOOR",
 		"x_coord" : 1153900,

@@ -16,4 +16,15 @@ CREATE TABLE parks (
     PRIMARY KEY (id)
 );
 
+CREATE TABLE users (
+    id INT AUTO_INCREMENT NOT NULL,
+    firstName VARCHAR(30) NOT NULL,
+    lastName VARCHAR(40) NOT NULL,
+    birthdate date,
+    email VARCHAR(60),
+    bio VARCHAR(500),
+    PRIMARY KEY (id)
+);
+
 SELECT * FROM parks;
+SELECT * FROM users;
