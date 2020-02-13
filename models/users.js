@@ -39,15 +39,19 @@ module.exports = function(sequelize, Datatypes) {
             defaultValue: sequelize.literal('CURRENT_TIMESTAMP(3)')
         }
     })
+    // checking for unhashed password entered user
+    // comparing to hashed password stored in database
     users.prototype.validPassword = (password) => {
         return bcrypt.compareSync(password, this.password)
     };
+    // before user account created password automatically hashed
     users.addHook("beforeCreate", (user) => {
         user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10), null)
     });
     return users;
 };
 
+// SCHEMA
 // CREATE TABLE users (
 //     id INT AUTO_INCREMENT NOT NULL,
 //     firstName VARCHAR(30) NOT NULL,
