@@ -5,14 +5,10 @@ const router = express.Router();
 router.get("/users", async (request, response) => {
     try {
        const results =  await db.users.findAll({})
-       const hbsObj = {
-           users : results
-       };
        if (Array.isArray(results) && results.length) {
-           console.log(hbsObj)
            response
                 .status(200)
-                .render("index", hbsObj)
+                .send(results)
        } else {
            return response
                 .status(404)
@@ -27,7 +23,7 @@ router.get("/users", async (request, response) => {
     }
 });
 
-router.post('/api/users', async (request, response) => {
+router.post('/users', async (request, response) => {
     try {
         const userData = {
             firstName: request.body.firstName,
