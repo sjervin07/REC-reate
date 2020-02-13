@@ -17,7 +17,6 @@ router.get("/users", async (request, response) => {
            return response
                 .status(404)
                 .send("users array not found")
-                .end()
        }
     }
     catch (error) {
@@ -30,7 +29,7 @@ router.get("/users", async (request, response) => {
 
 router.post('/api/users', async (request, response) => {
     try {
-        const result = {
+        const userData = {
             firstName: request.body.firstName,
             lastName: request.body.lastName,
             birthdate: request.body.birthdate,
@@ -38,28 +37,15 @@ router.post('/api/users', async (request, response) => {
             password: request.body.password,
             bio: request.body.bio
         }
-        await db.users.create(result)
-        // await ((dbusers) => {
-
-        // })
-        // const {firstName, lastName, birthdate, email, password, bio} = request.body
-        // console.log(request.body)
-        // const result = await db.users.create(['firstName', 'lastName', 'birthdate', 'email', 'password', 'bio'],
-        //                 [firstName, lastName, birthdate, email, password, bio]);
-        if (result.affectedRows === 0) {
+        const result = await db.users.create(userData)
+        if (result) {
+            response.status(201).json(result)
+        } else {
             return response
                 .status(404)
                 .send("the user was not added successfully")
-                .end()
-        } else {
-            console.log(result)
-            console.log({id: result.insertId}, {firstName: firstName}, {lastName: lastName}, 
-                {birthdate: birthdate}, {email: email}, {password: password}, {bio: bio})
-            response
-                .json({id: result.insertId})
-                .status(200)
-                .send("user added successfully")
         }
+        
     } catch (error) {
             if (error) {
                 console.log(error)

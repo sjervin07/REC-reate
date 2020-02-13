@@ -1,4 +1,5 @@
 // Requiring necessary npm packages
+require('dotenv').config();
 const express = require("express");
 const session = require("express-session");
 const exphbs = require("express-handlebars");
@@ -28,12 +29,12 @@ app.set('views', path.join(__dirname, 'views'));
 app.set("view engine", "handlebars");
 
 // Requiring routers
-// const router = require("./controllers/users_controllers.js");
-// app.use(router)
-require("./routes/users-routes.js")(app);
+const router = require("./controllers/users_controllers.js");
+app.use(router)
+// require("./routes/users-routes.js")(app);
 
 // Syncing our database and logging a message to the user upon success
-db.sequelize.sync({ force: true }).then(function() {
+db.sequelize.sync({ /*force: true*/ }).then(function() {
     app.listen(PORT, () => {
         console.log(`App running on http://localhost:${PORT}`)
     });    
