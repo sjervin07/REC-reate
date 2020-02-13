@@ -1,40 +1,27 @@
 const db = require("../models");
-const express = require("express");
-// const router = express.Router();
 
-// router.get("/", async (request, response) => {
-//     try {
-//        const results =  await db.users.findAll({})
-//        const hbsObj = {
-//            users : results
-//        };
-//        if (Array.isArray(results) && results.length) {
-//            console.log(hbsObj)
-//            response
-//                 .status(200)
-//                 .render("users", hbsObj)
-//        } else {
-//            return response
-//                 .status(404)
-//                 .send("users array not found")
-//                 .end()
-//        }
-//     }
-//     catch (error) {
-//         response
-//             .status(500)
-//             .send("error occurred")
-//             throw error
-//     }
-// });
 
-// module.exports = router;
+module.exports = function(app) {
 
-module.exports = function (app) {
+    app.post("/api/users", (request, response) => {
+        db.users.create({
+            firstName: request.body.firstName,
+            lastName: request.body.lastName,
+            birthdate: request.body.birthdate,
+            email: request.body.email,
+            password: request.body.password,
+            bio: request.body.bio
+        }).then((dbusers) => {
+            response.json(dbusers)
+        }).catch((error) => {
+            response.json(error)
+        })
+    })
 
-    app.get("/api/users", (request, response) => {
-        db.users.findAll({}).then((dbUsers) => {
-            response.json(dbUsers)
+    app.get("/api/user_data", (request, response) => {
+        db.users.findAll({})
+        .then((dbusers) => {
+            return response.json(dbusers)
         })
     })
 };
