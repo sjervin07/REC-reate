@@ -6,8 +6,8 @@ const exphbs = require("express-handlebars");
 // Requiring passport
 const passport = require("./config/passport");
 const bodyParser = require("body-parser");
-// Setting up port and requiring models for syncing
-const PORT = process.env.PORT || 8642;
+// Local PORT defined in .env
+const PORT = process.env.PORT
 const db = require("./models");
 const path = require("path");
 
