@@ -1,5 +1,7 @@
 'use strict';
 
+const bcrypt = require("bcryptjs");
+
 module.exports = function(sequelize, Datatypes) {
     const users = sequelize.define("users", {
         id: {
@@ -13,17 +15,6 @@ module.exports = function(sequelize, Datatypes) {
         birthdate: Datatypes.DATE,
         email: {
             type: Datatypes.STRING,
-                //Regex: 
-                // /->open; start of email address
-                // \S->not whitespace; user email name
-                // +->plus; combine user email with @
-                // @->@; matches @ symbol for email address
-                // \S->not whitespace; email client name
-                // +->plus; combine email client name with "."
-                // \.->escaped char; matches "." char for email
-                // \S->not whitespace; email client domain
-                // +->plus; match one or more of preceding token
-                // /->close; finish of email address
             validate: /\S+@\S+\.\S+/
         },
         password: {
@@ -48,6 +39,12 @@ module.exports = function(sequelize, Datatypes) {
             defaultValue: sequelize.literal('CURRENT_TIMESTAMP(3)')
         }
     })
+    users.prototype.validPassword = (password) => {
+        return bcrypt.compareSync(password, this.password)
+    };
+    users.addHook("beforeCreate", (user) => {
+        user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10), null)
+    });
     return users;
 };
 

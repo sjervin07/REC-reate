@@ -27,9 +27,9 @@ app.engine("handlebars", exphbs({defaultLayout: "main"}));
 app.set('views', path.join(__dirname, 'views'));
 app.set("view engine", "handlebars");
 
-// Requiring our routes
-//const routes = [require("./routes/html-routes.js")(app), require("./routes/api-routes.js")(app)];
-//app.use(routes);
+// Requiring controllers
+const controllers = require("./controllers/users_controllers.js")(app)
+app.use(controllers);
 
 // Syncing our database and logging a message to the user upon success
 db.sequelize.sync({ force: true }).then(function() {
