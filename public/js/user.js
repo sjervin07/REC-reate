@@ -1,3 +1,5 @@
+
+// from reverseengineeringcode assignment
 $(document).ready(function() {
     // Getting references to our form and inputs
     var loginForm = $("form.login");
@@ -37,4 +39,62 @@ $(document).ready(function() {
         });
     }
   });
+
+  // from restaurants app
+  //wait to attach handlers until DOM is full
+$(function() {
+  $("#addburger").on("click", event => {
+    //prevent default on submit event
+    event.preventDefault();
+    let burgerName = $("#newBurger")
+    .val()
+    .trim()
+    let nuevoBurger = {
+      burger_name: burgerName
+    };
+    $.ajax("/api/burgers", {
+      type: "POST",
+      data: nuevoBurger
+    }).then(() => {
+      console.log(`${nuevoBurger} created`);
+      //reload page to retrieve updated list
+      location.href = "/"
+      //location.reload();
+    });
+  });
+
+  //Devour Burger on click event changes devour column to true
+  $(".devourburger").on("click", event => {
+    //prevent default on devour click event
+    event.preventDefault();
+    const id = $(event.target).data("id");
+    console.log($(event.target).data("id"))
+    const devouredState = {
+      //if devoured = 1 return true; else devoured = 0 return false
+      devoured: 1
+    };
+    //put request for true
+    $.ajax(`/api/burgers/${id}`, {
+      type: "PUT",
+      data: devouredState
+    }).then(() => {
+      //reload upon completion of put request
+      console.log("Burger Devoured!");
+      location.reload();
+    });
+  });
+
+  //eightySixBurger on click event deletes burger from DB
+  $(".eightySixBurger").on("click", event => {
+    //prevent default on eightySix click event
+    event.preventDefault();
+    const id = $(event.target).data("id");
+    console.log(id)
+
+    //send eightySix request
+    $.ajax(`/api/burgers/${id}`, {
+      type: "DELETE",
+    }).then(location.reload());
+  });
+});
   
