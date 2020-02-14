@@ -1,0 +1,40 @@
+{{> navbar }}
+<div id="profile">
+   <div class="container">
+
+    
+          {{#each user}}
+            <div class="row">
+              <div class="col-md-4 col-sm-12 d-inline-block px-auto">
+                  <h2>{{username}}</h2>
+                  <img src="../assets/images/dummyuser.jpeg" class="card-img-top" alt="User Profile Picture">
+                
+              </div>
+                <div class="col-md-8 col-sm-12 user-info">
+                  
+                    <h4>{{ firstname }} {{ lastname }}</h4>
+                    <h4>{{ city }}</h4>
+                    <h4>{{ homeField }}</h4>
+                    <h4>{{ preferedSport}}</h4>
+
+
+                    <div class="user-bio mt-5">
+                        <h2>About Me</h2>
+                        <p class="bio-text">{{ bio }}</p>
+                    
+                      
+        
+                    </div>
+                 
+                </div>
+              
+              
+              
+           
+          
+          {{/each}}
+  </div>
+</div>
+
+    <!--End of content-->
+</div>
