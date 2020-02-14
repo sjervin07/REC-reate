@@ -7,7 +7,7 @@ const exphbs = require("express-handlebars");
 const passport = require("./config/passport");
 const bodyParser = require("body-parser");
 // Local PORT defined in .env
-const PORT = process.env.PORT
+const PORT = process.env.PORT;
 const db = require("./models");
 const path = require("path");
 

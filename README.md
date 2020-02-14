@@ -11,7 +11,10 @@
 
 # User Story
 
+The purpose of this app is to reach out to local athletes, in the community in order to pick and establish pick up games within your sport(s) or choice. It will encourage people to build relationships, form bonds, and build leagues without the confines of park district rules. The user will create a login to be able to interact with, and form teams will other users. After teams are built they can then search for a park that works for everyone. If a user chooses not to create a login they can still look at parks, but they won't be able to build teams or join games. 
+
 # Future Outlook
+In the future we would like to be able to see the games played, the teams that are build by the users. We would also like reverse geo-code, to give out the actually address of the parks making it easier for the users to get togther to play the games. 
 
 # Technical Overview
 
