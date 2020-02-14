@@ -7,8 +7,19 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/index.html"));
   });
 
+  app.get("/login", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/login.html"));
+  });
+
   app.get("/profile", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/profile.html"));
+  });
+
+  app.get("/register", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/register.html"));
+  });
+  app.get("/search", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/search.html"));
   });
 
   // If no matching route is found default to home
