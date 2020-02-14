@@ -23,6 +23,27 @@ router.get("/users", async (request, response) => {
     }
 });
 
+router.get("/parks", async (request, response) => {
+    try {
+       const results =  await db.parks.findAll({})
+       if (Array.isArray(results) && results.length) {
+           response
+                .status(200)
+                .send(results)
+       } else {
+           return response
+                .status(404)
+                .send("parks array not found")
+       }
+    }
+    catch (error) {
+        response
+            .status(500)
+            .send("error occurred")
+            throw error
+    }
+});
+
 router.post('/users', async (request, response) => {
     try {
         const userData = {
@@ -50,6 +71,65 @@ router.post('/users', async (request, response) => {
                     .send("error occurred")
                     throw error
             }
+    }
+});
+
+router.put('/users/:id', async (request, response) => {
+    try {
+        // const condition = `id = ${request.params.id}`;
+        console.log(request.body)
+        const results = await db.users.update(
+            {
+                firstName: request.body.firstName,
+                lastName: request.body.lastName,
+                birthdate: request.body.birthdate,
+                email: request.body.email,
+                bio: request.body.bio
+        },
+            {where: {id: request.params.id}}
+        )
+        if (results) {
+            response
+                .status(201)
+                .json(results)
+        } else {
+            response
+                .status(404)
+                .send("id not found, bio not updated")
+        }
+    } catch (error) {
+        if (error) {
+            console.log(error)
+            response
+                .status(500)
+                .send("error occurred")
+                throw error
+        }
+    }
+});
+
+router.delete('/users/:id', async (request, response) => {
+    try {
+        console.log(request.body)
+        const trashed = await db.users.destroy({where : {id: request.params.id}})
+        if (trashed) {
+            response
+                .status(203)
+                .json(trashed)
+        } else {
+            response
+                .status(404)
+                .send("user account not deleted")
+        }
+    }
+    catch (error) {
+        if (error) {
+            console.log(error)
+            response
+                .status(500)
+                .send(`error occurred ${error}`)
+                throw error
+        }
     }
 });
 
