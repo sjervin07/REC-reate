@@ -33,6 +33,9 @@ const router = require("./controllers/users_controllers.js");
 app.use('/api', router)
 // require("./routes/users-routes.js")(app);
 
+//Installing html routes
+require("./routes/html-routes")(app);
+
 // Syncing our database and logging a message to the user upon success
 db.sequelize.sync({ /*force: true*/ }).then(function() {
     app.listen(PORT, () => {
