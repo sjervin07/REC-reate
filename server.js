@@ -29,10 +29,8 @@ app.engine('handlebars', handlebars.engine)
 app.set("view engine", "handlebars");
 
 // Requiring routers
-const parksRouter = require("./controllers/parks_controllers.js");
 const routerDos = require('./controllers/html_controllers.js');
 const routerTres = require('./controllers/login-controllers.js');
-//app.use('/api', parksRouter);
 app.use(routerDos);
 app.use('/api', routerTres);
 
