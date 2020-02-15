@@ -38,6 +38,8 @@ app.use('/api', router);
 app.use('/api', routerDos);
 app.use('/api', routerTres);
 
+app.get('/', (request, response) => response.render('index'));
+
 
 // Syncing our database and logging a message to the user upon success
 db.sequelize.sync({ /*force: true*/ }).then(function() {
