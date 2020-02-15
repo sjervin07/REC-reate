@@ -24,8 +24,10 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 //Set handlebars
-app.engine("handlebars", exphbs({defaultLayout: "main"}));
-app.set('views', path.join(__dirname, 'views'));
+const handlebars = require('./helpers/handlebars.js')(exphbs);
+// app.engine("handlebars", exphbs({defaultLayout: "main"}));
+app.engine('handlebars', handlebars.engine)
+// app.set('views', path.join(__dirname, 'views'));
 app.set("view engine", "handlebars");
 
 // Requiring routers

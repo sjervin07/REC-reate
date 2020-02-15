@@ -42,7 +42,7 @@ $(document).ready(function() {
   });
 
   function registerUser(firstName, lastName, email, birthdate, password, bio) {
-    $.post("/register", {
+    $.post("/api/register", {
       firstName: firstName,
       lastName: lastName,
       email: email,
@@ -52,7 +52,7 @@ $(document).ready(function() {
     })
       .then(() => {
         console.log("new user added successfully");
-        window.location.replace("/profile");
+        window.location.replace("/api/profile");
       })
       .catch(errorHandler);
   }

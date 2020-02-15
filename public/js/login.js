@@ -25,7 +25,7 @@ $(document).ready(function() {
     //if successful redirects to profile page
     function userLogin(email, password) {
         console.log('entered user login function');
-        $.post('/login', {
+        $.post('/api/login', {
             email: email,
             password: password
         }).then(() => {
