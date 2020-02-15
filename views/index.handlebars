@@ -27,36 +27,15 @@
             <section id="parkResults">
               <div class="row mb-5">
                 <div class="col-6 listing"><ul class="list-unstyled">
+                 {{#each parks}}
                   <li class="media">
                     <img src="img/85th-Logo-FINAL-4-color_2.png" class="mr-3" alt="park logo">
                     <div class="media-body">
-                      <h5 class="mt-0 mb-1"><strong>Park Name</strong></h5>
-                      <p id="address">123 Fake st.</p>
-                      <p id="city">Chicago, IL</p>
-                      <p id="zipcode">60164</p>
-                      <p id="telephone">888-555-1234</p>
+                      <h5 class="mt-0 mb-1" id="facility_name"><strong>{{facility_name}}</strong></h5>
+                      <p id="facility_type">{{facility_type}}</p>
                     </div>
                   </li>
-                  <li class="media my-4">
-                    <img src="img/85th-Logo-FINAL-4-color_2.png" class="mr-3" alt="park logo">
-                    <div class="media-body">
-                      <h5 class="mt-0 mb-1"><strong>Park Name</strong></h5>
-                      <p id="address">123 Fake st.</p>
-                      <p id="city">Chicago, IL</p>
-                      <p id="zipcode">60164</p>
-                      <p id="telephone">888-555-1234</p>
-                    </div>
-                  </li>
-                  <li class="media">
-                    <img src="img/85th-Logo-FINAL-4-color_2.png" class="mr-3" alt="park logo">
-                    <div class="media-body">
-                      <h5 class="mt-0 mb-1"><strong>Park Name</strong></h5>
-                      <p id="address">123 Fake st.</p>
-                      <p id="city">Chicago, IL</p>
-                      <p id="zipcode">60164</p>
-                      <p id="telephone">888-555-1234</p>
-                    </div>
-                  </li>
+                  {{/each}}
                 </ul>
               </div>
                 <div class="col-6">
