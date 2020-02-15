@@ -31,8 +31,10 @@ app.set("view engine", "handlebars");
 // Requiring routers
 const router = require("./controllers/users_controllers.js");
 const routerDos = require ('./controllers/html_controllers.js');
+const routerTres = require ('./controllers/login-controllers.js');
 app.use('/api', router);
 app.use('/api', routerDos);
+app.use('/api', routerTres);
 
 
 // Syncing our database and logging a message to the user upon success

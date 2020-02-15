@@ -6,7 +6,7 @@ const passport = require('../config/passport.js');
 //utilize passport authentication
 //if user has valid credentials, proceed to profile page
 //if user does not have valid credentials, send an error
-router.post('/api/login', passport.authenticate('local'), (request, response) => {
+router.post('/login', passport.authenticate('local'), (request, response) => {
     console.log('return api login puta')
     response.json(request.users)
 });
@@ -15,7 +15,7 @@ router.post('/api/login', passport.authenticate('local'), (request, response) =>
 //incorporates user info into database corresponding to user table created via sequelize in models/users.js
 //If user registered = success, log user in
 //else, return an error
-router.post('/api/register', (request, response) => {
+router.post('/register', (request, response) => {
     db.users.create({
         firstName: request.body.firstName,
         lastName: request.body.lastName,
@@ -24,7 +24,7 @@ router.post('/api/register', (request, response) => {
         password: request.body.password,
         bio: request.body.bio
     }).then(() => {
-        response.redirect(307, '/api/login')
+        response.redirect(307, '/login')
     }).catch((error) => {
         response.status(401).json(error)
     })
@@ -37,7 +37,7 @@ router.get('/logout', (request, response) => {
 });
 
 // route for getting data about user for client side
-router.get('/api/user_data', (request, response) => {
+router.get('/users_data', (request, response) => {
     if (!request.users) {
         response.json({})
     } else {
