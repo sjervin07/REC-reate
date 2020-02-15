@@ -1,3 +1,4 @@
+//found on stackoverflow
 function hbsHelpers(hbs) {
     return hbs.create({
         default: 'main',
