@@ -1,37 +1,42 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
+const db = require("../models");
+const isAuthenticated = require("../config/middleware/isAuthenticated");
 
-const isAuthenticated = require('../config/middleware/isAuthenticated');
-
-router.get('/', (request, response) => {
-    //if user has account send them to profile page
-    if (request.users) {
-        response.render('profile', { layout: 'main.handlebars' })
-    }
-    //if no account send user to index
-    else {
-        response.render('index', { layout: 'main.handlebars' })
-    }
+router.get("/", async (request, response) => {
+  //if user has account send them to profile page
+  try {
+    const results = await db.Park.findAll({ raw: true });
+    response.render("index", { parks: results, loggedInUser: request.user });
+  } catch (error) {
+    response.status(500).send("error occurred");
+    throw error;
+  }
 });
 
-router.get('/register', (request, response) => {
-    response.render('register', { layout: 'main.handlebars' })
+router.get("/register", (request, response) => {
+  response.render("register", { loggedInUser: request.user });
 });
 
-router.get('/login', (request, response) => {
-    //If user has an account send to profile; else, send to index
-    if (request.users) {
-        response.redirect('/profile')
-    }
-    else {
-        response.render('index', { layout: 'main.handlebars' })
-    }
+router.get("/login", (request, response) => {
+  //If user has an account send to profile; else, send to index
+  if (request.user) {
+    response.redirect("/profile");
+  } else {
+    response.render("login", { loggedInUser: request.user });
+  }
+});
+
+//log a user out
+router.get("/logout", (request, response) => {
+  request.logout();
+  response.redirect("/");
 });
 
 //isAuthenticated middleware utilized here
 //if user is not logged in and tries to access profile they will be redirected to signup page
-router.get('/profile', isAuthenticated, (request, response) => {
-    response.render('profile', { layout: 'main.handlebars' })
+router.get("/profile", isAuthenticated, (request, response) => {
+  response.render("profile", { user: request.user, loggedInUser: request.user });
 });
 
 module.exports = router;

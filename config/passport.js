@@ -12,9 +12,7 @@ passport.use(new LocalStrategy(
   (email, password, done) => {
     // When a user tries to sign in this code runs
     db.User.findOne({
-      where: {
-        email: email
-      }
+      where: { email }
     }).then((dbUser) => {
       // If there's no user with the given email
       if (!dbUser) {
@@ -29,7 +27,7 @@ passport.use(new LocalStrategy(
         });
       }
       // If none of the above, return the user
-      return done(null, dbUser);
+      return done(null, dbUser.dataValues);
     });
   }
 ));

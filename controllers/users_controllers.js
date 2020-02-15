@@ -1,11 +1,11 @@
 const db = require("../models");
 const express = require("express");
 const router = express.Router();
-const passport = require('../config/passport.js');
+//const passport = require('../config/passport.js');
 
 router.get("/users", async (request, response) => {
     try {
-       const results =  await db.users.findAll({})
+       const results =  await db.User.findAll({})
        if (Array.isArray(results) && results.length) {
            response
                 .status(200)
@@ -14,28 +14,6 @@ router.get("/users", async (request, response) => {
            return response
                 .status(404)
                 .send("users array not found")
-       }
-    }
-    catch (error) {
-        response
-            .status(500)
-            .send("error occurred")
-            throw error
-    }
-});
-
-//get parks info from seeded db
-router.get("/parks", async (request, response) => {
-    try {
-       const results =  await db.parks.findAll({})
-       if (Array.isArray(results) && results.length) {
-           response
-                .status(200)
-                .send(results)
-       } else {
-           return response
-                .status(404)
-                .send("parks array not found")
        }
     }
     catch (error) {
@@ -57,7 +35,7 @@ router.post('/users', async (request, response) => {
             password: request.body.password,
             bio: request.body.bio
         }
-        const result = await db.users.create(userData)
+        const result = await db.User.create(userData)
         if (result) {
             response.status(201).json(result)
         } else {
@@ -81,7 +59,7 @@ router.put('/users/:id', async (request, response) => {
     try {
         // const condition = `id = ${request.params.id}`;
         console.log(request.body)
-        const results = await db.users.update(
+        const results = await db.User.update(
             {
                 firstName: request.body.firstName,
                 lastName: request.body.lastName,
@@ -114,7 +92,7 @@ router.put('/users/:id', async (request, response) => {
 router.delete('/users/:id', async (request, response) => {
     try {
         console.log(request.body)
-        const trashed = await db.users.destroy({where : {id: request.params.id}})
+        const trashed = await db.User.destroy({where : {id: request.params.id}})
         if (trashed) {
             response
                 .status(203)
@@ -135,6 +113,18 @@ router.delete('/users/:id', async (request, response) => {
         }
     }
 });
+
+// route for getting data about user for client side
+router.get("/users_data", (request, response) => {
+    if (!request.users) {
+      response.json({});
+    } else {
+      response.json({
+        email: request.user.email,
+        id: request.user.id
+      });
+    }
+  });
 
 module.exports = router;
 

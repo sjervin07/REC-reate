@@ -1,4 +1,4 @@
-{{> navbar }}
+{{> navbar loggedInUser=loggedInUser }}
 <div id="index">
    <div class="jumbotron jumbotron-fluid">
   <div class="container" >
@@ -17,7 +17,7 @@
 
                         <h2>Our Mission Statement</h2>
 
-                        <p>Our mission is simple. To create an application that will bring people of all walks of life together in a fun and engaging way. Rec-Create is designed to appeal to the inner athlete in you. Whether you’re a former athlete and miss the game, or had an interest but never the opportunity to play the sport that you love, we are here to help.  Rec-Create’s long term goal is to create long lasting memories and bonds, all while promoting a healthy lifestyle, through the common love of sports.</p> 
+                        <p>Our mission is simple. To create an application that will bring people of all walks of life together in a fun and engaging way. Rec-reate is designed to appeal to the inner athlete in you. Whether you’re a former athlete and miss the game, or had an interest but never the opportunity to play the sport that you love, we are here to help.  Rec-reate’s long-term goal is to provide a platform to connect with like-minded individuals while simultaneously promoting a healthy lifestyle through the common love of sports.</p> 
                         
                         
 
@@ -31,7 +31,7 @@
                   <li class="media">
                     <img src="assets/images/85th-Logo-FINAL-4-color_2.png" class="mr-3" alt="park logo">
                     <div class="media-body">
-                      <h5 class="mt-0 mb-1" id="facility_name"><strong>{{facility_name}}</strong></h5>
+                      <h5 class="mt-0 mb-1" id="facility_name"><strong><span>{{facility_name}}</span></strong></h5>
                       <p id="facility_type">{{facility_type}}</p>
                     </div>
                   </li>
@@ -46,7 +46,7 @@
              </section>
 
 
-             <section class="results listing">
+             {{!-- <section class="results listing">
                <div class="row mb-5">
                 <div class="searchresults col-12">
                   <table class="table">
@@ -114,7 +114,7 @@
                 </div>
 
                </div>
-             </section>
+             </section> --}}
         
           
 

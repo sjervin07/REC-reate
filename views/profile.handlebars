@@ -1,24 +1,23 @@
-{{> navbar }}
+{{> navbar loggedInUser=loggedInUser }}
 <div id="profile">
    <div class="container">
 
     
-          {{#each user}}
             <div class="row">
               <div class="col-md-4 col-sm-12 d-inline-block px-auto">
-                  <h2>{{username}}</h2>
-                  <img src="../assets/images/dummyuser.jpeg" class="card-img-top" alt="User Profile Picture">
+                  
+                  <img src="../assets/images/dogecodes.jpg" class="card-img-top" alt="User Profile Picture">
                 
               </div>
                 <div class="col-md-8 col-sm-12 user-info">
                   
-                    <h4><span class="memberFirstName"></span> <span class="memberLastName"></span></h4>
-                    <h4><span class="memberEmail"></span></h4>
-                    <h4><span class="memberBirthdate"></span></h4>
+                    <h4><span>{{user.firstName}}</span> <span>{{user.lastName}}</span></h4>
+                    <h4><span>{{user.email}}</span></h4>
+                    <h4><span>{{user.birthdate}}</span></h4>
 
                     <div class="user-bio mt-5">
                         <h2>About Me</h2>
-                        <p class="memberBio"></p>
+                        <p>{{user.bio}}</p>
                     
                       
         
@@ -30,7 +29,6 @@
               
            
           
-          {{/each}}
   </div>
 </div>
 

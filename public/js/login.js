@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    /*
     const loginForm = $('form.logs');
     const emailInp = $('input#inputEmail');
     const passwordInp = $('input#inputPassword');
@@ -36,4 +37,5 @@ $(document).ready(function() {
             console.log('login failed')
         })
     }
+    */
 });

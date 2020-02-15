@@ -1,3 +1,7 @@
+const express = require("express");
+const router = express.Router();
+const db = require("../models");
+
 // //getting geoloction from user input//
 
 // let geolocator ;
@@ -35,3 +39,26 @@
 
 // 	console.log(res.body);
 // });
+
+//get parks info from seeded db
+router.get("/parks", async (request, response) => {
+    try {
+       const results =  await db.Park.findAll()
+       if (Array.isArray(results) && results.length) {
+           response.status(200)
+                .send(results)
+       } else {
+           return response
+                .status(404)
+                .send("parks array not found")
+       }
+    }
+    catch (error) {
+        response
+            .status(500)
+            .send("error occurred")
+            throw error
+    }
+});
+
+module.exports = router;

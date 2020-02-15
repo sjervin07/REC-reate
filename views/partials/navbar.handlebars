@@ -1,7 +1,8 @@
 <div id="mainNavbar" class="container-fluid">
     <nav class="navbar navbar-expand-md navbar-dark bg-dark navbar-shrink">
         <a class="navbar-brand d-md-none" href="/">REC-reate</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDrop" aria-controls="navbarNavDrop" aria-expanded="false" aria-label="Toggle nav">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDrop"
+            aria-controls="navbarNavDrop" aria-expanded="false" aria-label="Toggle nav">
             <span class="fas fa-bars"></span>
         </button>
 
@@ -9,24 +10,29 @@
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
                     <a class="nav-link" href="/">
-                    <i class="fa fa-home"></i><img src="assets/images/logo.png" class="mr-3" alt="logo">
-                    <span class="sr-only">(current)</span>
+                        <i class="fa fa-home"></i><img src="assets/images/logo.png" class="mr-3" alt="logo">
+                        <span class="sr-only">(current)</span>
                     </a>
                 </li>
             </ul>
+
             <ul class="navbar-nav">
+                {{#if loggedInUser}}
+                <li class="nav-item">
+                    <a class="nav-link" href="/profile">Profile</a>
+                </li>
+                <li><a class="nav-link" href="/logout">Logout</a></li>
+                {{!-- <li class="nav-item">
+                    <a class="nav-link" href="/parks">Search</a>
+                </li> --}}
+                {{else}}
                 <li class="nav-item">
                     <a class="nav-link" href="/login">Login</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/register">Register</a>
-                {{!-- <li class="nav-item">
-                    <a class="nav-link" href="/parks">Search</a>
-                </li> --}}
-                <li class ="nav-item">
-                    <a class="nav-link" href="/profile">Profile</a>
                 </li>
-                </li>
+                {{/if}}
             </ul>
         </div>
     </nav>
