@@ -7,7 +7,6 @@ router.get("/", async (request, response) => {
   //if user has account send them to profile page
   try {
     const results = await db.Park.findAll({ raw: true });
-    console.log('parkssssssss===>>', results);
     response.render("index", { parks: results, loggedInUser: request.user });
   } catch (error) {
     response.status(500).send("error occurred");

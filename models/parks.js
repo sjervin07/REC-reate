@@ -26,7 +26,7 @@ module.exports = function(sequelize, Datatypes) {
             allowNull: false,
             defaultValue: sequelize.literal('CURRENT_TIMESTAMP(3)')
         }
-    })
+    }, {tableName: 'parks'})
     // parks.associate = (models) => {
     //     require
     // }

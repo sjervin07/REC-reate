@@ -10,7 +10,6 @@ router.post(
   "/login",
   passport.authenticate("local", { failureRedirect: "/" }),
   (request, response) => {
-    console.log("return api login===>>>", request.user);
     response.redirect('/profile');
   }
 );
@@ -20,7 +19,6 @@ router.post(
 //If user registered = success, log user in
 //else, return an error
 router.post("/register", (request, response) => {
-  console.log('req body===>>', request.body);
   db.User
     .create(request.body)
     .then(() => {

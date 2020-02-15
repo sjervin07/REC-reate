@@ -38,7 +38,7 @@ module.exports = function(sequelize, Datatypes) {
             allowNull: false,
             defaultValue: sequelize.literal('CURRENT_TIMESTAMP(3)')
         }
-    })
+    }, {tableName: 'users'})
     // checking for unhashed password entered user
     // comparing to hashed password stored in database
     users.prototype.validPassword = function(password) {
