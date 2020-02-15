@@ -1,15 +1,21 @@
 {{> navbar }}
 <div id="login">
- <div class="col-md-4 form-container mx-auto mt-5">
-            <form class="form-signin text-center" action="/login" method="post">
-              <h2 class=" mb-3 font-weight-normal text-dark">Please sign in</h2>
-              <label for="inputUsername" class="sr-only">Username</label>
-              <input type="text" id="inputUsername" name="username" class="form-control p-4" placeholder="Username" required="" autofocus="">
-              <br>
-              <label for="inputPassword" class="sr-only">Password</label>
-              <input type="password" id="inputPassword" name="password" class="form-control p-4" placeholder="Password" required="">
-              <button class="btn btn-lg btn-primary btn-block mt-3" type="submit">Sign in</button>
-              <p class="mt-5 mb-3 text-muted">REC-reate © 2020</p>
-            </form>
-    </div>
+  <div class="col-md-4 form-container mx-auto mt-5">
+    <form class="form-signin text-center" action="/login" method="post">
+      <h2 class=" mb-3 font-weight-normal text-dark">Please sign in</h2>
+      <label for="inputUsername" class="sr-only">Username</label>
+      <input type="text" id="inputUsername" name="username" class="form-control p-4" placeholder="Username" required=""
+        autofocus="">
+      <br>
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input type="password" id="inputPassword" name="password" class="form-control p-4" placeholder="Password"
+        required="">
+      <div style="display: none" id="alert" class="alert alert-danger" role="alert">
+          <span class="fas fa-exclamation" aria-hidden="true" id="alert"></span>
+          <span class="sr-only">Error:</span> <span class="msg"></span>
+      </div>
+      <button class="btn btn-lg btn-primary btn-block mt-3" type="submit">Sign in</button>
+      <p class="mt-5 mb-3 text-muted">REC-reate © 2020</p>
+    </form>
+  </div>
 </div>
