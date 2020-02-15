@@ -30,7 +30,7 @@ router.get('/login', (request, response) => {
 
 //isAuthenticated middleware utilized here
 //if user is not logged in and tries to access profile they will be redirected to signup page
-router.get('/members', isAuthenticated, (request, response) => {
+router.get('/profile', isAuthenticated, (request, response) => {
     response.render('profile', { layout: 'main.handlebars' })
 });
 
