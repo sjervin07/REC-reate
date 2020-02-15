@@ -1,6 +1,7 @@
 const db = require("../models");
 const express = require("express");
 const router = express.Router();
+const passport = require('../config/passport.js');
 
 router.get("/users", async (request, response) => {
     try {
@@ -22,6 +23,7 @@ router.get("/users", async (request, response) => {
             throw error
     }
 });
+
 //get parks info from seeded db
 router.get("/parks", async (request, response) => {
     try {
@@ -44,6 +46,7 @@ router.get("/parks", async (request, response) => {
     }
 });
 
+//post 
 router.post('/users', async (request, response) => {
     try {
         const userData = {
