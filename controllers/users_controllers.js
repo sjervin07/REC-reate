@@ -22,7 +22,7 @@ router.get("/users", async (request, response) => {
             throw error
     }
 });
-
+//get parks info from seeded db
 router.get("/parks", async (request, response) => {
     try {
        const results =  await db.parks.findAll({})
