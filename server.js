@@ -38,6 +38,7 @@ app.use('/api', router);
 app.use('/api', routerDos);
 app.use('/api', routerTres);
 
+//rendering all hbrs with server
 app.get('/', (request, response) => response.render('index'));
 app.get('/login', (request, response) => response.render('login'));
 app.get('/profile', (request, response) => response.render('profile'));
