@@ -39,6 +39,9 @@ app.use('/api', routerDos);
 app.use('/api', routerTres);
 
 app.get('/', (request, response) => response.render('index'));
+app.get('/login', (request, response) => response.render('login'));
+app.get('/profile', (request, response) => response.render('profile'));
+app.get('/register', (request, response) => response.render('register'));
 
 
 // Syncing our database and logging a message to the user upon success

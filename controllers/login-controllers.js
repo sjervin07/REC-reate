@@ -7,7 +7,7 @@ const passport = require('../config/passport.js');
 //if user has valid credentials, proceed to profile page
 //if user does not have valid credentials, send an error
 router.post('/login', passport.authenticate('local'), (request, response) => {
-    console.log('return api login puta')
+    console.log('return api login')
     response.json(request.users)
 });
 
