@@ -20,6 +20,7 @@ router.post(
 //If user registered = success, log user in
 //else, return an error
 router.post("/register", (request, response) => {
+  console.log('req body===>>', request.body);
   db.User
     .create(request.body)
     .then(() => {
